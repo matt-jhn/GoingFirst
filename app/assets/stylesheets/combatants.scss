@@ -1,0 +1,49 @@
+// Place all the styles related to the Combatants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cols {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+
+    -webkit-column-gap: 25px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 25px; /* Firefox */
+    column-gap: 25px;
+
+    text-align: center;
+}
+
+.header {
+	font-family: "Arial";
+	font-size: 50px;
+	color: #ecf0f1;
+	text-shadow: 2px 2px black;
+	font-weight: bold;
+}
+
+body {
+	background-color: #7f8c8d;
+}
+
+.combs {
+	font-family: "Arial";
+	font-size: 20px;
+	color: #bdc3c7;
+	text-shadow: 1px 1px black;
+	font-weight: bold;
+}
+
+p.go {
+	color: #2ecc71;
+}
+
+.current {
+	font-family: "Arial";
+	color: #ecf0f1;
+	font-size: 100px;
+	text-align: center;
+	padding-top: 50px;
+	text-shadow: 2px 2px black;
+	font-weight: bold;
+}

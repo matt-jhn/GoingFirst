@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170821050604) do
+ActiveRecord::Schema.define(version: 20170822034422) do
 
   create_table "combatants", force: :cascade do |t|
     t.string "name"
     t.string "alignment"
+    t.boolean "turn"
   end
 
 end

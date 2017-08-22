@@ -1,0 +1,41 @@
+<div class='header cols'>
+	Name
+	<p>
+	Type
+	</p>
+	<p>
+	Turn?
+	</p>
+
+</div>
+
+<% @combatants.each do |combatant| %>
+<div class='combs cols'>
+
+		<%= combatant.name %>
+
+	<p>
+		<%= combatant.alignment %>
+	</p>
+
+	<% if combatant.turn? %>
+	<p class='go'>
+		GO!
+	</p>
+
+	<% else %>
+	<p>
+		Wait...
+	</p>
+	<% end %>
+
+</div>
+<% end %>
+
+<div class='current'>
+	<% @combatants.each do |combatant| %>
+		<% if combatant.turn? %>
+		It is <%= combatant.name %>'s turn!
+		<% end %>
+	<% end %>
+</div>
