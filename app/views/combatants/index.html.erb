@@ -33,7 +33,7 @@
 		GO!
 	</p>
 	<p>
-		<%= button_to "Kill", combatants_path(:id => combatant.id), :method => :delete %>
+		<%= button_to "Kill", combatants_path(:id => combatant.id), :method => :delete, :class => 'kill-button' %>
 	</p>
 
 	<% else %>
@@ -41,7 +41,7 @@
 		Wait...
 	</p>
 	<p>
-		<%= button_to "Kill", combatants_path(:id => combatant.id), :method => :delete %>
+		<%= button_to "Kill", combatants_path(:id => combatant.id), :method => :delete, :class => 'kill-button' %>
 	</p>
 	<% end %>
 

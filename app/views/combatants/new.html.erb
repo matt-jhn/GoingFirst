@@ -1,11 +1,39 @@
 <%= form_for(@combatant) do |f| %>
 	<div>
-		<%= f.label :combatant %><br>
-		<%= f.text_area :name %>
-		<%= f.text_area :alignment %>
-		<%= f.text_area :initiative %>
+		<%= f.label :new_combatant, :class => 'header' %><br>
+
+		<p class = 'combs'>
+		Name
+		</p>
+		<p>
+		<%= f.text_area :name, :class => 'text' %>
+		</p>
+
+		<p class = 'combs'>
+		Alignment (Player, Enemy, etc.)
+		</p>
+		<p>
+		<%= f.text_area :alignment, :class => 'text' %>
+		</p>
+
+		<p class = 'combs'>
+		Initiative
+		</p>
+		<p>
+		<%= f.text_area :initiative, :class => 'text' %>
+		</p>
+
+		<p class = 'combs'>
+		Current Turn (Can be left blank)
+		</p>
+		<p>
 		<%= f.check_box :turn, default: false %>
-		<%= f.submit 'New' %>
+		</p>
+
+		<p>
+		<%= f.submit 'New', :class => 'button' %>
+		</p>
+
 	</div>
 
 <% end %>

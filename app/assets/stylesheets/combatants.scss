@@ -52,14 +52,32 @@ p.go {
   background-color: #2ecc71;
   color: #ecf0f1;
   cursor: pointer;
-  font-size: 14px;
   font-weight: bold;
-  margin-top: 10px;
   padding: 12px 24px;
   font-family: "Arial";
   font-size: 24px;
   width: 15%;
   text-align: center;
   margin-top: 3%;
-  margin-left: 5%;
+  margin-left: 38%;
+  border-style: none;
+}
+
+.text {
+    font-family: 'Arial';
+    font-size: 14px;
+}
+
+.kill-button {
+	background-color: #9b59b6;
+	color: #ecf0f1;
+	cursor: pointer;
+	font-weight: bold;
+	font-family: "Arial";
+	font-size: 18px;
+	width: 20%;
+	text-align: center;
+	border-style: none;
+	padding-top: 2%;
+	padding-bottom: 2%;
 }
