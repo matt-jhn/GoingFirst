@@ -17,6 +17,11 @@ class CombatantsController < ApplicationController
 		end
 	end
 
+	def destroy
+		Combatant.destroy(params[:id])
+		redirect_to '/combatants'
+	end
+
 	private def combatant_params
 		params.require(:combatant).permit(:name, :alignment, :initiative, :turn)
 	end

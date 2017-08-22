@@ -9,6 +9,9 @@
 	<p>
 	Turn?
 	</p>
+	<p>
+	Kill
+	</p>
 
 </div>
 
@@ -29,10 +32,16 @@
 	<p class='go'>
 		GO!
 	</p>
+	<p>
+		<%= button_to "Kill", combatants_path(:id => combatant.id), :method => :delete %>
+	</p>
 
 	<% else %>
 	<p>
 		Wait...
+	</p>
+	<p>
+		<%= button_to "Kill", combatants_path(:id => combatant.id), :method => :delete %>
 	</p>
 	<% end %>
 

@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   get '/combatants' => 'combatants#index'
   get 'combatants/new' => 'combatants#new'
   post 'combatants' => 'combatants#create'
+  delete 'combatants' => 'combatants#destroy'
   
 end
