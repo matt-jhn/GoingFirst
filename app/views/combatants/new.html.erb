@@ -1,0 +1,11 @@
+<%= form_for(@combatant) do |f| %>
+	<div>
+		<%= f.label :combatant %><br>
+		<%= f.text_area :name %>
+		<%= f.text_area :alignment %>
+		<%= f.text_area :initiative %>
+		<%= f.check_box :turn, default: false %>
+		<%= f.submit 'New' %>
+	</div>
+
+<% end %>

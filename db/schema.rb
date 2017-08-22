@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 20170822180215) do
     t.string "name"
     t.string "alignment"
     t.boolean "turn"
-    t.integer "initiatve"
     t.integer "initiative"
   end
 
