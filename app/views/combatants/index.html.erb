@@ -29,8 +29,8 @@
 	</p>
 
 	<% if combatant.turn? %>
-	<p class='go'>
-		GO!
+	<p class='go-button'>
+		<%= link_to "GO!", update_turn_combatant_path(combatant), method: :patch , :class => 'go-text' %>
 	</p>
 	<p>
 		<%= button_to "Kill", combatants_path(:id => combatant.id), :method => :delete, :class => 'kill-button' %>

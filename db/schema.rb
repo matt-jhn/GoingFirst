@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170822180215) do
+ActiveRecord::Schema.define(version: 20170823041102) do
 
   create_table "combatants", force: :cascade do |t|
     t.string "name"
     t.string "alignment"
     t.boolean "turn"
     t.integer "initiative"
+    t.integer "turn_id"
   end
 
 end
