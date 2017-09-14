@@ -32,17 +32,39 @@
 	<p class='go-button'>
 		<%= link_to "GO!", update_turn_combatant_path(combatant), method: :patch , :class => 'go-text' %>
 	</p>
+
+	<% if combatant.name.length > 7 %>
+
 	<p>
-		<%= button_to "Kill", combatants_path(:id => combatant.id), :method => :delete, :class => 'kill-button' %>
+		<%= button_to "Kill #{combatant.name[0,7]}...", combatants_path(:id => combatant.id), :method => :delete, :class => 'kill-button combs' %>
 	</p>
+
+	<% else %>
+
+	<p>
+		<%= button_to "Kill #{combatant.name}", combatants_path(:id => combatant.id), :method => :delete, :class => 'kill-button combs' %>
+	</p>
+	<% end %>
 
 	<% else %>
 	<p>
 		Wait...
 	</p>
+
+	<% if combatant.name.length > 7 %>
+
 	<p>
-		<%= button_to "Kill", combatants_path(:id => combatant.id), :method => :delete, :class => 'kill-button' %>
+		<%= button_to "Kill #{combatant.name[0,7]}...", combatants_path(:id => combatant.id), :method => :delete, :class => 'kill-button combs' %>
 	</p>
+
+	<% else %>
+
+	<p>
+		<%= button_to "Kill #{combatant.name}", combatants_path(:id => combatant.id), :method => :delete, :class => 'kill-button combs' %>
+	</p>
+	
+	<% end %>
+
 	<% end %>
 
 </div>
@@ -51,11 +73,15 @@
 <div class='current'>
 	<% @combatants.each do |combatant| %>
 		<% if combatant.turn? %>
+		<% if combatant.name.length > 7 %>
+		It is <%= combatant.name[0,7]%>...'s turn!
+		<% else %>
 		It is <%= combatant.name %>'s turn!
+		<% end %>
 		<% end %>
 	<% end %>
 </div>
 
 <div class='button'>
-	<a href="/combatants/new" style="color: #ecf0f1; text-decoration: none;">New Combatant</a>
+	<a href="/combatants/new" style="color: #ecf0f1; text-decoration: none; text-shadow: 1px 1px black;">New Combatant</a>
 </div>
